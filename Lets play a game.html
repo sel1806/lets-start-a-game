@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interessante Website</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #gif {
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+      }
+      #button-start {
+        padding: 100px 100px;
+        font-size: 100px;
+        margin: 10px;
+      }
+      #button-yes {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+      }
+      #button-no {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+      }
+      #button-back {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="gif" src="" alt="GIF" style="visibility: hidden" />
+    <p></p>
+    <button id="button-start">Lass uns starten Amo</button>
+    <button id="button-yes" style="display: none">yes</button>
+    <button id="button-no" style="display: none">no</button>
+    <button id="button-back" style="display: none">back</button>
+
+    <script>
+      document
+        .getElementById("button-start")
+        .addEventListener("click", function () {
+          document.getElementById("button-start").style.display = "none";
+          document.getElementById("button-no").style.display = "inline-block";
+          document.getElementById("button-yes").style.display = "inline-block";
+          document.getElementById("gif").src =
+            "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWlueWZ6NHV6eThnczVkb2Rkc2ttNzMyY251eTEwMnBramc1Y3g0YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1JmGiBtqTuehfYxuy9/giphy.gif";
+          document.getElementById("gif").style.visibility = "visible";
+          document.querySelector("p").innerText = "Will you be my boyfriend?";
+        });
+      document
+        .getElementById("button-yes")
+        .addEventListener("click", function () {
+          document.getElementById("button-no").style.display = "none";
+          document.getElementById("button-yes").style.display = "none";
+          document.getElementById("gif").src =
+            "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDY0ZnE3bzcwMG0xajcyYmlzaXcyNGE0ZHNzbDRxZG42eHdmNWpqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qFmdpUKAFZ6rMobzzu/giphy.gif";
+          document.querySelector("p").innerText = "Awwwww YAAAAAAAAAAAAAA!";
+          document.getElementById("button-back").style.display = "inline-block";
+        });
+
+      document
+        .getElementById("button-no")
+        .addEventListener("click", function () {
+          document.getElementById("gif").src =
+            "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWo5c29wMjdmNjB5MDd1dTJuc2Z1cmdvbTJtNDVsOTV4aDV1a3doaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sbOgoOmefr5gPJ8BHt/giphy.gif";
+          this.style.display = "none";
+          document.getElementById("button-yes").style.display = "none";
+          var text = document.querySelector("p").innerText;
+          switch (text) {
+            case "Will you be my boyfriend?":
+              document.querySelector("p").innerText =
+                "bist du dir wirklich sicher? (drück ja)?";
+              document.getElementById("gif").src =
+                "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWo5c29wMjdmNjB5MDd1dTJuc2Z1cmdvbTJtNDVsOTV4aDV1a3doaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sbOgoOmefr5gPJ8BHt/giphy.gif";
+              break;
+            case "bist du dir wirklich sicher? (drück ja)?":
+              document.querySelector("p").innerText = "komm schooon";
+              document.getElementById("gif").src =
+                "https://media0.giphy.com/media/ghXitlPhJSsMzpAQvD/giphy.gif?cid=ecf05e47twpf10pl6bzor03656i8y3bbsq0ms7jngdzsp4dm&ep=v1_gifs_related&rid=giphy.gif&ct=g";
+              break;
+            case "komm schooon":
+              document.querySelector("p").innerText = "bittteeeeeee";
+              document.getElementById("gif").src =
+                "https://media0.giphy.com/media/fg9B1qFWPYvndCnQiJ/giphy.gif?cid=ecf05e47krvgm2v6rlkavhxfmquejgm27z6u7iqtzge893ai&ep=v1_gifs_related&rid=giphy.gif&ct=g";
+              break;
+            case "bittteeeeeee":
+              document.querySelector("p").innerText =
+                "warum bist du so drück ja...";
+              document.getElementById("gif").src =
+                "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGtpeWR4ZHlmbWc2NmpubWIxMWd5bjFqb3N1cXFvOGtrZWkxZ3NqbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9HXmQYoNSOE946ncsm/giphy.gif";
+              break;
+            case "warum bist du so drück ja...":
+              document.querySelector("p").innerText = "DRÜCK JAAAAAAAAAAAAA";
+              document.getElementById("gif").src =
+                "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWhkZmF3NHR4dmYzZjM0emtzZzFoY2x0Nmlwend4MzhvdmxyaDNxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eXUlPn1gmZavu/giphy.gif";
+              break;
+          }
+          setTimeout(function () {
+            document.getElementById("button-no").style.display = "inline-block";
+            document.getElementById("button-yes").style.display =
+              "inline-block";
+            document.getElementById("gif").src =
+              "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWlueWZ6NHV6eThnczVkb2Rkc2ttNzMyY251eTEwMnBramc1Y3g0YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1JmGiBtqTuehfYxuy9/giphy.gif";
+          }, 3000); // 2 sekunden
+        });
+
+      document
+        .getElementById("button-back")
+        .addEventListener("click", function () {
+          document.getElementById("button-yes").style.display = "inline-block";
+          document.getElementById("button-no").style.display = "inline-block";
+          document.getElementById("gif").src =
+            "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWlueWZ6NHV6eThnczVkb2Rkc2ttNzMyY251eTEwMnBramc1Y3g0YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1JmGiBtqTuehfYxuy9/giphy.gif";
+          document.querySelector("p").innerText = "Will you be my boyfriend?";
+          this.style.display = "none";
+        });
+    </script>
+  </body>
+</html>
